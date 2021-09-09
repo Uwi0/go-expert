@@ -1,11 +1,24 @@
 package com.example.goexpert
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.goexpert.databinding.ActivitySplashScreenBinding
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
+
+    private lateinit var mBinding: ActivitySplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        mBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
+        mBinding.btnStarted.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
