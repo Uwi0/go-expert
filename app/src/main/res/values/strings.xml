@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Go Expert</string>
+    <string name="emkl_ka4">EMKL KA4</string>
+    <string name="expedition">EXPEDITION</string>
+    <string name="get_started">Get Started</string>
 </resources>
